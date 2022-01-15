@@ -1,0 +1,21 @@
+<html>
+<head>
+<style>{{{css}}}</style>
+<script>{{{uplot}}}</script>
+</head>
+<body>
+<script>
+let data = {{{data}}};
+window.addEventListener('load', function(e){
+  let opts = {
+    title: "Metaflow Custom Card: Plotting timeseries with uPlot",
+    id: "mf-chart",
+    class: "mf-chart",
+    width: 600, //document.body.scrollWidth - 100,
+    height: 400, //document.body.scrollHeight - 100,
+    series: {{{config}}}
+  };
+  let uplot = new uPlot(opts, data, document.body);
+});
+</script>
+</body>

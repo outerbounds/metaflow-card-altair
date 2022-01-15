@@ -5,7 +5,7 @@ This is an example of how to render [Altair charts](https://altair-viz.github.io
 
 ## Instructions
 
-To run example, first run the Flow:
+To run the example, first run the Flow:
 
 ```bash
 python altairflow.py --environment=conda run

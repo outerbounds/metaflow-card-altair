@@ -1,3 +1,4 @@
 .*
 metaflow_card_cache/
 chart.html
+__pycache__

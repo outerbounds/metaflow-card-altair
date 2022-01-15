@@ -1,10 +1,10 @@
 import math, random
-from metaflow import step, FlowSpec, card, conda
+from metaflow import step, FlowSpec, card, conda_base
 
+@conda_base(python='3.8.10', libraries={'altair': '4.2.0', 'vega_datasets': '0.9.0', 'pandas': '1.3.0'})
 class AltairFlow(FlowSpec):
 
     @card(type='altair')
-    @conda(libraries={"altair": "4.2.0", "vega_datasets": "0.9.0", "pandas": "1.3.0"})
     @step
     def start(self):
         import altair as alt

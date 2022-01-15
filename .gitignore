@@ -2,3 +2,4 @@
 metaflow_card_cache/
 chart.html
 __pycache__
+!.gitignore

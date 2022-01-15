@@ -3,7 +3,7 @@ from metaflow.cards import MetaflowCard
 from metaflow.plugins.cards.card_modules import chevron
 
 class AltairCard(MetaflowCard):
-    type = "Altair"
+    type = "altair"
 
     def _read_template(self):
         root = os.path.join(os.path.dirname(__file__), 'altair')

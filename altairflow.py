@@ -4,7 +4,7 @@ from metaflow import step, FlowSpec, card, conda
 class AltairFlow(FlowSpec):
 
     @card(type='altair')
-    @conda(libraries={"altair": "4.2.0", "vega_datasets": "0.9.0"})
+    # @conda(libraries={"altair": "4.2.0", "vega_datasets": "0.9.0", "pandas": "1.3.0"})
     @step
     def start(self):
         import altair as alt

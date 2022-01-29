@@ -1,15 +1,14 @@
-import math, random
-from metaflow import step, FlowSpec, card, conda_base
+import math, random, os
+from metaflow import step, FlowSpec, card
 
-@conda_base(python='3.8.10', libraries={'altair': '4.2.0', 'vega_datasets': '0.9.0', 'pandas': '1.3.0'})
 class AltairFlow(FlowSpec):
 
-    @card(type='altair')
+    @card(type='html')
     @step
     def start(self):
         import altair as alt
         from vega_datasets import data
-
+        
         source = data.seattle_weather()
 
         scale = alt.Scale(domain=['sun', 'fog', 'drizzle', 'rain', 'snow'],
@@ -60,11 +59,10 @@ class AltairFlow(FlowSpec):
             title="Seattle Weather: 2012-2015"
         )
 
-        chart.save('chart.html')
-        with open('chart.html', 'r') as f:
-            self.chart = f.read()
-
+        self.html = chart.to_html()
         self.next(self.end)
+
+
     @step
     def end(self):
         pass

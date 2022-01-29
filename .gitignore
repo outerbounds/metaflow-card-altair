@@ -1,5 +1,7 @@
 .*
 metaflow_card_cache/
+.metaflow
+metaflow*
 chart.html
 __pycache__
-!.gitignore
+!.gitignoimpre

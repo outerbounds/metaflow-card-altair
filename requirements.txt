@@ -1,0 +1,4 @@
+pandas==1.4.0
+altair==4.2.0
+vega-datasets==0.9.0
+numpy==1.22.1

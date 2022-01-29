@@ -2,19 +2,24 @@
 
 This is an example of how to render [Altair charts](https://altair-viz.github.io/) in MetaFlow cards.  Altair allows you to make interactive plots.
 
-
 ## Instructions
 
-To run the example, first run the Flow:
+To run the example, first install dependencies
 
 ```bash
-python altairflow.py --environment=conda run
+pip install -r requirements.txt
+```
+
+Then, run the Flow:
+
+```bash
+python altairflow.py run
 ```
 
 Then, view the card:
 
 ```bash
-python altairflow.py --environment=conda card view start
+python altairflow.py card view start
 ```
 
 You can draw a rectangle on the top graph to filter the bar graph on the bottom:
